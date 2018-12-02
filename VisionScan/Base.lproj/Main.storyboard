@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bgK-HC-sUv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memories-->
+        <scene sceneID="lNE-dR-gpo">
+            <objects>
+                <tableViewController id="UhP-GE-LfT" customClass="MemoriesController" customModule="VisionScan" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yQR-9Q-tRu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="133" id="dfg-tx-alB" customClass="TableViewCell" customModule="VisionScan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="133"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dfg-tx-alB" id="nUj-Aw-nq3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-t2-mEt">
+                                            <rect key="frame" x="16" y="-9" width="64" height="90"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arS-UW-zlW">
+                                            <rect key="frame" x="16" y="42" width="343" height="74"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2kg-t2-mEt" firstAttribute="top" secondItem="nUj-Aw-nq3" secondAttribute="topMargin" constant="-20" id="3wt-ZO-naa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2kg-t2-mEt" secondAttribute="bottom" constant="41" id="Fdy-wo-7xb"/>
+                                        <constraint firstItem="arS-UW-zlW" firstAttribute="leading" secondItem="nUj-Aw-nq3" secondAttribute="leadingMargin" id="KcL-4j-HS3"/>
+                                        <constraint firstItem="2kg-t2-mEt" firstAttribute="leading" secondItem="arS-UW-zlW" secondAttribute="leading" id="PY0-Jq-iK0"/>
+                                        <constraint firstItem="arS-UW-zlW" firstAttribute="trailing" secondItem="nUj-Aw-nq3" secondAttribute="trailingMargin" id="a60-wk-M6E"/>
+                                        <constraint firstItem="arS-UW-zlW" firstAttribute="top" secondItem="nUj-Aw-nq3" secondAttribute="topMargin" constant="31" id="f6O-NJ-cLy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="arS-UW-zlW" secondAttribute="bottom" constant="6" id="fBh-lb-zBj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="significanceLabel" destination="arS-UW-zlW" id="v7u-2e-qqr"/>
+                                    <outlet property="titleLabel" destination="2kg-t2-mEt" id="TAV-nN-Zvf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="UhP-GE-LfT" id="8tg-iZ-2F0"/>
+                            <outlet property="delegate" destination="UhP-GE-LfT" id="vt9-hZ-Nl9"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Memories" image="mem" id="PZG-g0-3Cb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6y-F6-wtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.20000000000005" y="477.21139430284859"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="rjB-ab-ZPO">
+            <objects>
+                <viewController id="oll-sJ-x8R" customClass="ViewController" customModule="VisionScan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vyV-yf-lhS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-II-hDD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arskView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yRi-Az-v8r"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan" image="scan" id="L93-vS-gn6"/>
+                    <connections>
+                        <outlet property="sceneView" destination="9d2-II-hDD" id="Z0q-BJ-aX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEx-Jf-MlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.20000000000005" y="-210.04497751124438"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SRg-eb-cPV">
+            <objects>
+                <tabBarController id="bgK-HC-sUv" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ez2-dY-ctV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oll-sJ-x8R" kind="relationship" relationship="viewControllers" id="k8e-83-O06"/>
+                        <segue destination="UhP-GE-LfT" kind="relationship" relationship="viewControllers" id="cwa-Ce-fbR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdp-ff-yw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1560" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mem" width="24" height="24"/>
+        <image name="scan" width="30" height="30"/>
+    </resources>
+</document>
